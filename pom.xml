@@ -97,14 +97,14 @@
 	<distributionManagement>
 	
 	    <repository>
-	      <id>nexus</id>
-	      <name>practice-1-releaes</name>
+	      <id></id>
+	      <name></name>
 	      <url></url>
 	    </repository>
 	    
 	    <snapshotRepository>
-	      <id>nexus</id>
-	      <name>practice-1</name>
+	      <id></id>
+	      <name></name>
 	      <url></url>
 	    </snapshotRepository>
 	    
