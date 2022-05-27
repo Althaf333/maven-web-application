@@ -97,15 +97,15 @@
 	<distributionManagement>
 	
 	    <repository>
-	      <id></id>
-	      <name></name>
-	      <url></url>
+	      <id>nexus</id>
+	      <name>practice-1-releaes</name>
+	      <url>http://54.210.80.234:8081/repository/practice-1-releaes/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
-	      <id></id>
-	      <name></name>
-	      <url></url>
+	      <id>nexus</id>
+	      <name>practice-1</name>
+	      <url>http://54.210.80.234:8081/repository/practice-1/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
