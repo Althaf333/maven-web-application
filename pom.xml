@@ -21,7 +21,7 @@
 		<spring.version>5.1.2.RELEASE</spring.version>
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
-		<sonar.host.url>http://3.83.116.59:9000/</sonar.host.url>
+		<sonar.host.url>http://http://44.204.6.48:9000/</sonar.host.url>
                 <sonar.login>858d6f167bd3955d5a17949cb49f20f88864d8b9</sonar.login>
 		
              
@@ -99,13 +99,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>practice-1-releaes</name>
-	      <url>http://54.210.80.234:8081/repository/practice-1-releaes/</url>
+	      <url>http://52.87.179.123:8081/repository/practice-1-releaes/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>practice-1</name>
-	      <url>http://54.210.80.234:8081/repository/practice-1/</url>
+	      <url>http://52.87.179.123:8081/repository/practice-1/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
