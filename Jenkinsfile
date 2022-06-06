@@ -21,7 +21,6 @@ stage('Executesonarqubereport')
 sh "${mavenHome}/bin/mvn deploy"
 }
     
-/* 
 stage('UploadArtifactsintonexus')
 {
 sh "${mavenHome}/bin/mvn deploy"
@@ -43,6 +42,5 @@ devops.
 
 ''', subject: 'new pipe line test', to: 'althafhussain412@gmail.com'
 }
-8
-*/
+
 }
