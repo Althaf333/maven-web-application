@@ -33,6 +33,7 @@ sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@3.
 }
 }
 
+/*
 stage('sendEmailNotification')
 {
 emailext body: '''Testing the configurations...
@@ -42,5 +43,6 @@ devops.
 
 ''', subject: 'new pipe line test', to: 'althafhussain412@gmail.com'
 }
+*/
 
 }
