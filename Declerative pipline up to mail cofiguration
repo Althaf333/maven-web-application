@@ -1,0 +1,72 @@
+pipeline {
+
+agent any;
+
+tools{
+
+maven 'maven3.8.4'
+
+}
+
+stages{
+
+ stage('checkoutcode'){
+  steps{
+   git branch: 'development', credentialsId: 'ca070bd4-0a94-42e0-bb10-a32126f849ae', url: 'https://github.com/Althaf333/maven-web-application.git'
+  }
+ }
+
+ stage('build'){
+  steps{
+   sh "mvn clean package"
+  }
+ }
+
+ stage('Executesonarqubereport'){
+  steps{
+   sh "mvn sonar:sonar"
+  }
+ }
+
+ stage('DeployAppIntoTomcatserver'){
+  steps{
+   sshagent(['1bee304d-fcfb-48f2-95f8-391b9166c67f']) {
+   sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@3.90.191.19:/opt/apache-tomcat-9.0.63/webapps/"
+  }
+ }
+}
+
+
+}
+
+  post{
+    
+      success{
+          mail body: '''Testing ... Success
+  Regards
+  Althaf,
+  Devops.
+  ''', subject: 'new pipe line test success', to: 'althafhussain412@gmail.com'
+  }
+
+  failure{
+      mail body: '''Testing ... Failed
+  Regards
+  Althaf,
+  Devops.
+  ''', subject: 'new pipe line test...Failed', to: 'althafhussain412@gmail.com'
+  }
+
+  always{
+      mail body: '''Testing ... 
+  Regards
+  Althaf,
+  Devops.
+  ''', subject: 'new pipe line test...', to: 'althafhussain412@gmail.com'
+
+  }
+ 
+}
+}
+
+    
