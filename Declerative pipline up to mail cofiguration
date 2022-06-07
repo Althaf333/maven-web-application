@@ -8,6 +8,11 @@ maven 'maven3.8.4'
 
 }
 
+options{
+timestamp()
+
+}
+
 stages{
 
  stage('checkoutcode'){
