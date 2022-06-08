@@ -1,4 +1,4 @@
-node
+node('nodes')
 {
     
 def mavenHome = tool name: "maven3.8.4"
@@ -16,6 +16,7 @@ sh "whoami"
 sh "${mavenHome}/bin/mvn clean package"
 }
 
+/*
 stage('Executesonarqubereport')
 {
 sh "${mavenHome}/bin/mvn deploy"
@@ -33,7 +34,6 @@ sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@3.
 }
 }
 
-/*
 stage('sendEmailNotification')
 {
 emailext body: '''Testing the configurations...
